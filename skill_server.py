@@ -48,7 +48,9 @@ def _run_and_callback(utterance: str, callback_url: str) -> None:
 
 @app.route("/skill", methods=["POST"])
 def skill():
-    body = request.get_json(force=True) or {}
+    # silent=True: 본문이 비어있거나 JSON이 아니어도 예외 대신 None을 반환한다
+    # (오픈빌더의 스킬 테스트 기능 등이 이런 요청을 보내는 경우가 있었음).
+    body = request.get_json(silent=True) or {}
     utterance = body.get("userRequest", {}).get("utterance", "")
     callback_url = body.get("userRequest", {}).get("callbackUrl")
 

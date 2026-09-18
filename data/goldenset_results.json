@@ -1,0 +1,323 @@
+{
+  "tool_accuracy": 1.0,
+  "tool_macro_f1": 1.0,
+  "tool_f1_per_category": {
+    "intro": 1.0,
+    "studio_info": 1.0,
+    "work_process": 1.0,
+    "contact": 1.0,
+    "unclear": 1.0
+  },
+  "confusion_matrix": {
+    "intro": {
+      "intro": 4,
+      "studio_info": 0,
+      "work_process": 0,
+      "contact": 0,
+      "unclear": 0
+    },
+    "studio_info": {
+      "studio_info": 4,
+      "intro": 0,
+      "work_process": 0,
+      "contact": 0,
+      "unclear": 0
+    },
+    "work_process": {
+      "work_process": 4,
+      "intro": 0,
+      "studio_info": 0,
+      "contact": 0,
+      "unclear": 0
+    },
+    "contact": {
+      "contact": 4,
+      "intro": 0,
+      "studio_info": 0,
+      "work_process": 0,
+      "unclear": 0
+    },
+    "unclear": {
+      "unclear": 4,
+      "intro": 0,
+      "studio_info": 0,
+      "work_process": 0,
+      "contact": 0
+    }
+  },
+  "answer_accuracy": 0.8,
+  "cases": [
+    {
+      "id": "gs-intro-01",
+      "text": "장르 가리지 않고 다 하세요? 예술영화도 되나요?",
+      "expected_tool": "intro",
+      "predicted_tool": "intro",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "안녕하세요. 후킹포인트는 독립장편 예술영화부터 장편 상업영화, OTT 드라마까지 다양한 형식과 장르를 편집하고 있습니다. 따라서 예술영화도 가능합니다. 편집에 대한 더 궁금한 점이 있으시면 언제든지 문의해 주세요.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-intro-02",
+      "text": "그냥 컷 붙이는 편집이 아니라 스토리도 같이 봐주시나요?",
+      "expected_tool": "intro",
+      "predicted_tool": "intro",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "네, 후킹포인트는 단순히 컷과 컷을 붙이는 작업이 아니라, 스토리 구조와 캐릭터에 대한 이해를 바탕으로 감각적 판단도 고려하여 작업합니다. 그래서 작품의 특성과 필요에 맞춰 심도 있는 편집을 진행합니다. 추가적으로 감독님께서 원하실 경우, 프리 단계에서 시나리오 코멘트 및 콘티 회의에 참여하여 작품의 톤앤매너를 함께 고민할 수 있습니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-intro-03",
+      "text": "시나리오 단계에서부터 같이 봐주실 수 있나요?",
+      "expected_tool": "intro",
+      "predicted_tool": "intro",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "안녕하세요, 고객님. 후킹포인트는 감독님께서 의향이 있으실 경우, 프리 단계에서 시나리오에 대한 상세 코멘트 및 콘티 회의에 참여할 수 있습니다. 따라서 시나리오 단계부터 함께 작업하는 것이 가능합니다. 추가로 궁금한 사항이 있으시면 언제든지 문의해 주세요. 감사합니다.",
+      "answer_ok": false,
+      "missing_required": [],
+      "present_forbidden": [
+        "시나리오를 직접 작성"
+      ],
+      "note": ""
+    },
+    {
+      "id": "gs-intro-04",
+      "text": "편집 톤앤매너는 어떻게 잡으세요?",
+      "expected_tool": "intro",
+      "predicted_tool": "intro",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "후킹포인트에서는 작품의 특성에 따라 편집적 톤앤매너를 고민합니다. 촬영본에 맞춰 리듬을 조절하고, 작품의 포맷과 스토리 구조에 대한 이해를 바탕으로 작업합니다. 또한, 감독님과 함께 톤앤매너를 논의할 수 있는 기회를 제공하고 있습니다. 추가 문의가 필요하시면 언제든지 말씀해 주세요.",
+      "answer_ok": false,
+      "missing_required": [
+        "작품 포맷/특성에 맞춰 톤앤매너와 레퍼런스를 잡는다"
+      ],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-studio_info-01",
+      "text": "편집감독님 프로필 좀 볼 수 있을까요?",
+      "expected_tool": "studio_info",
+      "predicted_tool": "studio_info",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "편집감독 선다비님은 중앙대학교 영화학과를 졸업하였으며, 후킹포인트의 대표로 활동하고 계십니다. 편집 철학으로는 \"단순히 컷-컷을 붙이지 않는다\"는 원칙을 가지고 있으며, 다양한 형식과 장르의 작업을 맡아오셨습니다. 작업했던 작품으로는 장편 영화 \"지구 최후의 여자\", 드라마 \"조선변호사\" 등이 있습니다. 추가적인 정보가 필요하시면 확인 후 안내드리겠습니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-studio_info-02",
+      "text": "지구 최후의 여자도 편집하셨어요?",
+      "expected_tool": "studio_info",
+      "predicted_tool": "studio_info",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "네, 지구 최후의 여자(2026)에서 메인 편집을 담당하였습니다. 추가적인 질문이 있으시면 언제든 문의해 주세요.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-studio_info-03",
+      "text": "편집실 위치가 어디예요?",
+      "expected_tool": "studio_info",
+      "predicted_tool": "studio_info",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "후킹포인트(Hooking Point)의 편집실은 서울 강서구에 위치하고 있습니다. 추가적인 정보가 필요하시면 언제든지 문의해 주시기 바랍니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-studio_info-04",
+      "text": "협력하는 제작사나 플랫폼이 있나요?",
+      "expected_tool": "studio_info",
+      "predicted_tool": "studio_info",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "저희 후킹포인트(Hooking Point)는 여러 제작사와 협력하고 있습니다. 주요 협력사로는 CJ ENM, 닛폰 테레비, 페이지원필름, 뉴블랙스튜디오, 와이원엔터테인먼트, 원컨텐츠, 씨제스엔터테인먼트, 드라마하우스스튜디오 등이 있습니다. 또한, 배급 및 플랫폼으로는 필름초이스, 인디스토리, MBC, JTBC, tvN, KBS, 웨이브, 티빙, 넷플릭스, 디즈니+, 왓챠, 쿠팡플레이와 협력하고 있습니다. 추가적인 질문이 있으시면 언제든지 문의해 주세요.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": "협력사 목록 중 일부만 언급해도 required_facts 충족으로 채점 (전부 나열 강요하지 않음)"
+    },
+    {
+      "id": "gs-work_process-01",
+      "text": "단편영화는 보통 며칠 정도 걸리나요?",
+      "expected_tool": "work_process",
+      "predicted_tool": "work_process",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "단편영화의 작업 기간은 총 한 달입니다. 이 기간 중 2주는 편집실에서 소스 정리와 가편집본 작업에 할애하고, 이후 2주 후 감독님께 편집본을 전달합니다. 따라서 전체 작업 과정은 한 달 동안 진행됩니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-work_process-02",
+      "text": "16부작 드라마 기준으로 순서편집본을 얼마 안에 받을 수 있나요?",
+      "expected_tool": "work_process",
+      "predicted_tool": "work_process",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "16부작 드라마의 경우, 작품 촬영과 동시에 데이터가 업로드된 후 2일 내로 순서편집본을 전달해드립니다. 추가적인 정보가 필요하시다면 언제든지 문의해 주시기 바랍니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-work_process-03",
+      "text": "구성을 시나리오랑 다르게 바꾸고 싶으면 어떻게 되나요?",
+      "expected_tool": "work_process",
+      "predicted_tool": "work_process",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "구성 변경이 필요한 경우에는 시나리오 버전과 구성 변경 버전 두 가지를 전달해드리게 됩니다. 이후 감독님과 함께 파이널을 진행하며 디벨롭 및 제작사 의견을 반영하여 작품을 완성하게 됩니다. 추가적인 질문이 있으시면 언제든지 문의해주시기 바랍니다.",
+      "answer_ok": false,
+      "missing_required": [
+        "시나리오 버전",
+        "구성 변경 버전",
+        "두 가지로 전달"
+      ],
+      "present_forbidden": [
+        "추가 비용 발생"
+      ],
+      "note": ""
+    },
+    {
+      "id": "gs-work_process-04",
+      "text": "순서편집본 전달 이후에는 어떤 순서로 진행되나요?",
+      "expected_tool": "work_process",
+      "predicted_tool": "work_process",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "순서편집본 전달 이후에는 전체적인 흐름과 구조를 잡고 가편집을 진행하게 됩니다. 만약 구성 변경이 필요한 경우, 시나리오 버전과 구성 변경 버전 두 가지를 전달하며, 이후 감독님과 함께 최종 편집 파이널을 진행하여 작품을 완성하게 됩니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-contact-01",
+      "text": "전화 통화 가능하실까요?",
+      "expected_tool": "contact",
+      "predicted_tool": "contact",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "전화 통화에 대한 구체적인 안내는 확인 후 안내드리겠습니다. 추가적인 문의는 hooking.point@gmail.com으로 연락 주시면 순차적으로 답변 드리겠습니다. 감사합니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-contact-02",
+      "text": "미팅 잡고 싶은데 이번주 중 가능하신 날 있으실까요?",
+      "expected_tool": "contact",
+      "predicted_tool": "contact",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "안녕하세요. 문의해 주셔서 감사합니다. 미팅 가능일에 대해 확인 후 안내드리겠습니다. 추가적인 사항이 있으면 email로 연락 주시면 좋겠습니다. 연락처는 hooking.point@gmail.com입니다. 감사합니다.",
+      "answer_ok": false,
+      "missing_required": [
+        "순차적으로 답변"
+      ],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-contact-03",
+      "text": "대본 보내드리고 미팅 한번 잡고 싶습니다",
+      "expected_tool": "contact",
+      "predicted_tool": "contact",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "대본 보내주신 후, 미팅 일정에 대한 답변을 순차적으로 드리겠습니다. 문의 사항은 hooking.point@gmail.com으로 보내주시면 됩니다. 감사합니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-contact-04",
+      "text": "문의는 어디로 드리면 되나요?",
+      "expected_tool": "contact",
+      "predicted_tool": "contact",
+      "tool_ok": true,
+      "handoff": false,
+      "final_answer": "문의는 hooking.point@gmail.com으로 주시면 됩니다. 순차적으로 답변 드리겠습니다. 감사합니다.",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": ""
+    },
+    {
+      "id": "gs-unclear-01",
+      "text": "안녕하세요",
+      "expected_tool": "unclear",
+      "predicted_tool": "unclear",
+      "tool_ok": true,
+      "handoff": true,
+      "final_answer": "문의 주신 내용은 제가 바로 답변드리기 어려워, 담당자가 확인 후 순차적으로 안내드리겠습니다. 감사합니다.\nhooking.point@gmail.com",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": "인사말 — 근거 조회 없이 바로 넘기기가 정답"
+    },
+    {
+      "id": "gs-unclear-02",
+      "text": "오늘 날씨 진짜 좋네요 ㅎㅎ",
+      "expected_tool": "unclear",
+      "predicted_tool": "unclear",
+      "tool_ok": true,
+      "handoff": true,
+      "final_answer": "문의 주신 내용은 제가 바로 답변드리기 어려워, 담당자가 확인 후 순차적으로 안내드리겠습니다. 감사합니다.\nhooking.point@gmail.com",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": "잡담 — 넘기기가 정답"
+    },
+    {
+      "id": "gs-unclear-03",
+      "text": "작업 도중에 취소하면 환불 받을 수 있나요?",
+      "expected_tool": "unclear",
+      "predicted_tool": "unclear",
+      "tool_ok": true,
+      "handoff": true,
+      "final_answer": "문의 주신 내용은 제가 바로 답변드리기 어려워, 담당자가 확인 후 순차적으로 안내드리겠습니다. 감사합니다.\nhooking.point@gmail.com",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": "4개 근거 문서 어디에도 환불 정책이 없음 — 지어내지 않고 넘기는지가 핵심 테스트"
+    },
+    {
+      "id": "gs-unclear-04",
+      "text": "촬영 장비도 대여해주시나요?",
+      "expected_tool": "unclear",
+      "predicted_tool": "unclear",
+      "tool_ok": true,
+      "handoff": true,
+      "final_answer": "문의 주신 내용은 제가 바로 답변드리기 어려워, 담당자가 확인 후 순차적으로 안내드리겠습니다. 감사합니다.\nhooking.point@gmail.com",
+      "answer_ok": true,
+      "missing_required": [],
+      "present_forbidden": [],
+      "note": "편집실 서비스 범위 밖 — 문서에 없는 내용이므로 넘기기가 정답"
+    }
+  ]
+}

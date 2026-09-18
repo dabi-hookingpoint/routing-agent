@@ -1,0 +1,154 @@
+{
+  "categories": ["intro", "studio_info", "work_process", "contact", "unclear"],
+  "cases": [
+    {
+      "id": "gs-intro-01",
+      "text": "장르 가리지 않고 다 하세요? 예술영화도 되나요?",
+      "expected_tool": "intro",
+      "required_facts": ["독립장편 예술영화", "상업영화", "OTT 드라마"],
+      "forbidden_facts": ["애니메이션", "예능", "광고 영상"]
+    },
+    {
+      "id": "gs-intro-02",
+      "text": "그냥 컷 붙이는 편집이 아니라 스토리도 같이 봐주시나요?",
+      "expected_tool": "intro",
+      "required_facts": ["스토리 구조와 캐릭터에 대한 이해", "감각적 판단"],
+      "forbidden_facts": ["색보정까지 무료로 진행", "사운드믹싱도 포함"]
+    },
+    {
+      "id": "gs-intro-03",
+      "text": "시나리오 단계에서부터 같이 봐주실 수 있나요?",
+      "expected_tool": "intro",
+      "required_facts": ["감독님 의향이 있을 경우", "프리 단계 시나리오 코멘트", "콘티 회의 참여"],
+      "forbidden_facts": ["시나리오를 직접 작성", "모든 작품에 의무적으로 참여"]
+    },
+    {
+      "id": "gs-intro-04",
+      "text": "편집 톤앤매너는 어떻게 잡으세요?",
+      "expected_tool": "intro",
+      "required_facts": ["작품 포맷/특성에 맞춰 톤앤매너와 레퍼런스를 잡는다"],
+      "forbidden_facts": ["항상 빠른 컷 위주로 편집", "모든 작품에 같은 스타일 적용"]
+    },
+
+    {
+      "id": "gs-studio_info-01",
+      "text": "편집감독님 프로필 좀 볼 수 있을까요?",
+      "expected_tool": "studio_info",
+      "required_facts": ["선다비", "중앙대학교 영화학과"],
+      "forbidden_facts": ["한양대", "20년 경력"]
+    },
+    {
+      "id": "gs-studio_info-02",
+      "text": "지구 최후의 여자도 편집하셨어요?",
+      "expected_tool": "studio_info",
+      "required_facts": ["지구 최후의 여자", "메인편집"],
+      "forbidden_facts": ["오징어게임", "기생충"]
+    },
+    {
+      "id": "gs-studio_info-03",
+      "text": "편집실 위치가 어디예요?",
+      "expected_tool": "studio_info",
+      "required_facts": ["서울 강서구"],
+      "forbidden_facts": ["강남구", "마포구"]
+    },
+    {
+      "id": "gs-studio_info-04",
+      "text": "협력하는 제작사나 플랫폼이 있나요?",
+      "expected_tool": "studio_info",
+      "required_facts": ["CJ ENM", "넷플릭스"],
+      "forbidden_facts": ["아마존 프라임", "애플TV"],
+      "note": "협력사 목록 중 일부만 언급해도 required_facts 충족으로 채점 (전부 나열 강요하지 않음)"
+    },
+
+    {
+      "id": "gs-work_process-01",
+      "text": "단편영화는 보통 며칠 정도 걸리나요?",
+      "expected_tool": "work_process",
+      "required_facts": ["한 달", "2주"],
+      "forbidden_facts": ["일주일", "3개월"]
+    },
+    {
+      "id": "gs-work_process-02",
+      "text": "16부작 드라마 기준으로 순서편집본을 얼마 안에 받을 수 있나요?",
+      "expected_tool": "work_process",
+      "required_facts": ["2일"],
+      "forbidden_facts": ["일주일", "한 달"]
+    },
+    {
+      "id": "gs-work_process-03",
+      "text": "구성을 시나리오랑 다르게 바꾸고 싶으면 어떻게 되나요?",
+      "expected_tool": "work_process",
+      "required_facts": ["시나리오 버전", "구성 변경 버전", "두 가지로 전달"],
+      "forbidden_facts": ["추가 비용 발생", "구성 변경 불가능"]
+    },
+    {
+      "id": "gs-work_process-04",
+      "text": "순서편집본 전달 이후에는 어떤 순서로 진행되나요?",
+      "expected_tool": "work_process",
+      "required_facts": ["흐름과 구조를 잡아 가편집", "감독님과 파이널", "제작사 의견 반영"],
+      "forbidden_facts": ["플랫폼이 직접 편집을 감수", "편집실 단독으로 최종 승인"]
+    },
+
+    {
+      "id": "gs-contact-01",
+      "text": "전화 통화 가능하실까요?",
+      "expected_tool": "contact",
+      "required_facts": ["순차적으로 답변", "hooking.point@gmail.com"],
+      "forbidden_facts": ["지금 바로 전화 연결", "실시간 통화 가능"]
+    },
+    {
+      "id": "gs-contact-02",
+      "text": "미팅 잡고 싶은데 이번주 중 가능하신 날 있으실까요?",
+      "expected_tool": "contact",
+      "required_facts": ["순차적으로 답변", "hooking.point@gmail.com"],
+      "forbidden_facts": ["특정 요일/시간 확정 제공"]
+    },
+    {
+      "id": "gs-contact-03",
+      "text": "대본 보내드리고 미팅 한번 잡고 싶습니다",
+      "expected_tool": "contact",
+      "required_facts": ["순차적으로 답변"],
+      "forbidden_facts": ["대본은 검토하지 않는다", "즉시 미팅 확정"]
+    },
+    {
+      "id": "gs-contact-04",
+      "text": "문의는 어디로 드리면 되나요?",
+      "expected_tool": "contact",
+      "required_facts": ["hooking.point@gmail.com"],
+      "forbidden_facts": ["010으로 시작하는 전화번호", "카카오톡 채널로만 문의 가능"]
+    },
+
+    {
+      "id": "gs-unclear-01",
+      "text": "안녕하세요",
+      "expected_tool": "unclear",
+      "required_facts": [],
+      "forbidden_facts": ["서울 강서구", "선다비", "지구 최후의 여자"],
+      "note": "인사말 — 근거 조회 없이 바로 넘기기가 정답"
+    },
+    {
+      "id": "gs-unclear-02",
+      "text": "오늘 날씨 진짜 좋네요 ㅎㅎ",
+      "expected_tool": "unclear",
+      "required_facts": [],
+      "forbidden_facts": ["서울 강서구", "선다비", "편집 방식"],
+      "note": "잡담 — 넘기기가 정답"
+    },
+    {
+      "id": "gs-unclear-03",
+      "text": "작업 도중에 취소하면 환불 받을 수 있나요?",
+      "expected_tool": "unclear",
+      "required_facts": [],
+      "forbidden_facts": ["환불 가능", "전액 환불", "환불 규정"],
+      "note": "4개 근거 문서 어디에도 환불 정책이 없음 — 지어내지 않고 넘기는지가 핵심 테스트"
+    },
+    {
+      "id": "gs-unclear-04",
+      "text": "촬영 장비도 대여해주시나요?",
+      "expected_tool": "unclear",
+      "required_facts": [],
+      "forbidden_facts": ["카메라 대여 가능", "장비 목록 제공"],
+      "note": "편집실 서비스 범위 밖 — 문서에 없는 내용이므로 넘기기가 정답"
+    }
+  ]
+}
